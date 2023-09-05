@@ -1,4 +1,9 @@
 <?php
+// eemalda urlist muutujad
+function clearVarsExcept($url, $varname) {
+    return strtok(basename($_SERVER['REQUEST_URI']),"?")."?$varname=".$_REQUEST[$varname];
+}
+
 echo "<h1>Matemaatika tehed</h1>";
 $number1=50;
 $number2=100;
@@ -16,7 +21,7 @@ echo "arv2-arv1 * 2 = ";
 echo ($number2-$number1 * 2);
 ?>
 <h2>Kontrollimiseks sisesta 2 arvu</h2>
-<form name="kontroll" action="matemaatika.php">
+<form name="kontroll" action="<?=clearVarsExcept(basename($_SERVER['REQUEST_URI']),"leht")?>" method='post'>
     <label for="n1">Arv 1</label>
     <input type="number" name="n1">
     <br>
