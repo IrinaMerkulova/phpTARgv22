@@ -25,6 +25,7 @@ echo ($number2-$number1 * 2);
     <input type="submit" value="OK">
 </form>
 <?php
+// kontroll
 if (isset($_REQUEST["n1"])) {
 
     if ($_REQUEST["n1"] == $number1) {
