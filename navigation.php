@@ -4,7 +4,8 @@
         <li><a href="http://merkulova.thkit.ee/1kursus">HTML leht</a></li>
         <li><a href="?leht=joonis.php">JS Joonis</a></li>
         <li><a href="?leht=matemaatika.php">Matemaatika tehed</a></li>
-        <li><a href="?">...</a></li>
+        <li><a href="?leht=pildifailidegatoo.php">Töö pildifailidega</a></li>
+        <li><a href="?leht=tekstifunktsioonid.php">Tekstifunktsioonid</a></li>
     </ul>
 </nav>
 

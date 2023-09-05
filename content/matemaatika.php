@@ -1,7 +1,10 @@
 <?php
 // eemalda urlist muutujad
 function clearVarsExcept($url, $varname) {
+    //töötab php stormis index faili kaudu
     return strtok(basename($_SERVER['REQUEST_URI']),"?")."?$varname=".$_REQUEST[$varname];
+    //töötab zone.ee serveris
+    // return "?$varname=".$_REQUEST[$varname];
 }
 
 echo "<h1>Matemaatika tehed</h1>";
@@ -26,14 +29,15 @@ echo ($number2-$number1 * 2);
     <input type="number" name="n1">
     <br>
     <label for="n2">Arv 2</label>
-    <input type="number" name="n2" value="0">
+    <input type="number" name="n2">
     <input type="submit" value="OK">
 </form>
 <?php
 // kontroll
+//probleem 1 - leht värvida valgeks, kui arvud sisestamata!!!!
 if (isset($_REQUEST["n1"])) {
 
-    if ($_REQUEST["n1"] == $number1) {
+    if ($_REQUEST["n1"] == $number1)
         if ($_REQUEST["n2"] == $number2) {
             echo "Õige!";
             echo "<body style='background-color: lightgreen'>";
@@ -43,7 +47,7 @@ if (isset($_REQUEST["n1"])) {
         } else {
             echo "<body style='background-color: white'>";
         }
-    } else {
+    else {
             echo "vale!";
             echo "<body style='background-color: lightcoral'>";
         }
