@@ -1,5 +1,12 @@
 <?php
 require ('conf.php');
+global $yhendus;
+//kustutamine
+if(isset($_REQUEST["kustuta"])){
+    $kask=$yhendus->prepare("DELETE FROM uudised WHERE id=?");
+    $kask->bind_param("i", $_REQUEST["kustuta"]);
+    $kask->execute();
+}
 ?>
 <!DOCTYPE html>
 <html lang="et">
@@ -14,7 +21,7 @@ require ('conf.php');
             <th>Teema</th>
             <th>Kirjeldus</th>
             <th>Kuupäev</th>
-
+            <th>XXXX</th>
         </tr>
         <?php
         global $yhendus;
@@ -27,6 +34,7 @@ require ('conf.php');
             echo "<td bgcolor='$varv'>".htmlspecialchars($teema)."</td>";
             echo "<td>".htmlspecialchars($kirjeldus)."</td>";
             echo "<td>".htmlspecialchars($kuupaev)."</td>";
+            echo "<td><a href='?kustuta=$id'>Delete</a></td>";
             echo "</tr>";
         }
 
