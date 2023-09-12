@@ -44,7 +44,7 @@ echo substr($tekst, strpos($tekst, " "), strlen($tekst)-strpos($tekst, " "));
 <?php
 $linn='';
 echo "<ol><li>Linnanimi pikkus on ".strlen($linn). "tähte</li>";
-
+echo "</ol>";
 highlight_file('tekstifunktsioonid.php');
 
 
