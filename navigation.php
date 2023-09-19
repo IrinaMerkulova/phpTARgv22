@@ -7,6 +7,7 @@
         <li><a href="?leht=pildifailidegatoo.php">Töö pildifailidega</a></li>
         <li><a href="?leht=tekstifunktsioonid.php">Tekstifunktsioonid</a></li>
         <li><a href="?leht=kodutoo.php">Kodutöö (massiivid/tsüklid)</a></li>
+        <li><a href="http://merkulova.thkit.ee/baas/kalad.php">Kalade leht</a></li>
     </ul>
 </nav>
 

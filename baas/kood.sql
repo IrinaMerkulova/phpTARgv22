@@ -9,3 +9,13 @@ VALUES ('ilm', '2023-09-12', 'Täna on soe ilm. ');
 SELECT * FROM uudised;
 
 ALTER TABLE uudised ADD COLUMN varv varchar(15);
+
+
+CREATE TABLE kalad(
+                      id int PRIMARY KEY AUTO_INCREMENT,
+                      kalanimi varchar(20),
+                      pilt TEXT,
+                      varv varchar(10));
+INSERT INTO kalad(kalanimi)
+VALUES ('forell');
+SELECT * FROM kalad;irinamerkulova

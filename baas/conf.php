@@ -1,5 +1,5 @@
 <?php
-$serverinimi="localhost";
+$serverinimi="localhost"; //d70420.mysql.zonevs.eu
 $kasutajanimi="irinamerkulova";
 $parool="123456";
 $andmebaas="irinamerkulova";
